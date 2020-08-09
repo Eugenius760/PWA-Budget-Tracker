@@ -19,6 +19,8 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://Dwheez:DMCmjd22@ds137263.
   useFindAndModify: false
 });
 
+mongoose.connect(MONGODB_URI)
+
 // routes
 app.use(require("./routes/api.js"));
 
