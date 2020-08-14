@@ -14,10 +14,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://Dwheez:DMCmjd22@ds137263.mlab.com:37263/heroku_393v8z77", {
-  useNewUrlParser: true,
-  useFindAndModify: false
-});
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget";
 
 mongoose.connect(MONGODB_URI)
 
